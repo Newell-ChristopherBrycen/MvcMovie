@@ -12,5 +12,7 @@ namespace MvcMovie.Data
         }
 
         public DbSet<Movie> Movie { get; set; }
+
+        public DbSet<MvcMovie.Models.GenreList> GenreLists { get; set; }
     }
 }

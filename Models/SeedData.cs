@@ -51,9 +51,51 @@ namespace MvcMovie.Models
                         ImagePath = "SaintsAndSoldiers"
                     }
 
-                ); 
-                context.SaveChanges();
+                );
+                // Movie Genres
+                if (!context.GenreLists.Any())
+                {
+                    context.GenreLists.AddRange(
+                        new GenreList
+                        {
+                            GenreListID = 1,
+                            GenreListName = "Action",
+
+                        },
+                        new GenreList
+                        {
+                            GenreListID = 2,
+                            GenreListName = "Historical",
+                        },
+                        new GenreList
+                        {
+                            GenreListID = 3,
+                            GenreListName = "Drama",
+
+                        },
+                        new GenreList
+                        {
+                            GenreListID = 3,
+                            GenreListName = "Comedy",
+                        },
+                        new GenreList
+                        {
+                            GenreListID = 4,
+                            GenreListName = "Family",
+                        },
+                        new GenreList
+                        {
+                            GenreListID = 5,
+                            GenreListName = "Documentary",
+                        }
+
+                        );
+                }
+
+                    context.SaveChanges();
             }
+
+            
         }
     }
 }
