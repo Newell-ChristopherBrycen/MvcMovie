@@ -5,46 +5,70 @@
     ViewData["Title"] = "Edit - " + Model.Title;
 }
 <div class="background">
-    <h1>Edit Movie Details</h1>
+    <h1>Edit Movie</h1>
 
-    <h4>Movie</h4>
+    <h4>Movie - @Html.DisplayFor(model => model.Title)</h4>
     <hr />
     <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Edit">
+        
+        <form asp-action="Edit" >
+            <div class="card-columns">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
-                <div class="form-group">
-                    <label asp-for="Title" class="control-label"></label>
-                    <input asp-for="Title" class="form-control" />
-                    <span asp-validation-for="Title" class="text-danger"></span>
+                <div class="card-columns, col-12">
+                    <div style="break-inside: avoid; background-color: #c5d5c5; border-radius: 15px;">
+                        <label asp-for="Title" class="control-label" style="padding-top: .9rem; padding-left: .9rem; font-size: large; font-weight: bold;"></label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="ReleaseDate" class="control-label"></label>
-                    <input asp-for="ReleaseDate" class="form-control" />
-                    <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+                <br />
+                <div class="card-columns, col-12">
+                    <div style="break-inside: avoid; background-color: #c5d5c5; border-radius: 15px;">
+                        <label asp-for="ReleaseDate" class="control-label" style="padding-top: .9rem; padding-left: .9rem; font-size: large; font-weight: bold;"></label>
+                        <input asp-for="ReleaseDate" class="form-control" />
+                        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Genre" class="control-label"></label>
-                    <input asp-for="Genre" class="form-control" />
-                    <span asp-validation-for="Genre" class="text-danger"></span>
+                <br />
+                <div class="card-columns, col-12">
+                    <div style="break-inside: avoid; background-color: #c5d5c5; border-radius: 15px;">
+                        <label asp-for="Genre" class="control-label" style="padding-top: .9rem; padding-left: .9rem; font-size: large; font-weight: bold;"></label>
+                        <input asp-for="Genre" class="form-control" />
+                        <span asp-validation-for="Genre" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Rating" class="control-label"></label>
-                    <input asp-for="Rating" class="form-control" />
-                    <span asp-validation-for="Rating" class="text-danger"></span>
+                <br />
+                <div class="card-columns, col-12">
+                    <div style="break-inside: avoid; background-color: #c5d5c5; border-radius: 15px;">
+                        <label asp-for="Rating" class="control-label" style="padding-top: .9rem; padding-left: .9rem; font-size: large; font-weight: bold;"></label>
+                        <input asp-for="Rating" class="form-control" />
+                        <span asp-validation-for="Rating" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Price" class="control-label"></label>
-                    <input asp-for="Price" class="form-control" />
-                    <span asp-validation-for="Price" class="text-danger"></span>
+                <br />
+                <div class="card-columns, col-12">
+                    <div style="break-inside: avoid; background-color: #c5d5c5; border-radius: 15px;">
+                        <label asp-for="Price" class="control-label" style="padding-top: .9rem; padding-left: .9rem; font-size: large; font-weight: bold;"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                <br />
+                <!-- details view image requirement edit ></!-->
+            </div>
+
+                <hr />
+                <br />
+
+                <div class="card-columns, col-12" style="break-before:always;">
+                    <input type="submit" value="Save" class="btn btn-primary, card-columns" style="padding: 1rem; font-size: large; font-weight: bold; background-color: #c5d5c5" />
                 </div>
-            </form>
-        </div>
+        </form>
+        
     </div>
+
+    <br />
 
     <div>
         <a asp-action="Index">Back to List</a>
