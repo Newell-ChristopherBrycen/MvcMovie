@@ -28,7 +28,7 @@ namespace MvcMovie.Models
                         Genre = "Family",
                         Rating = "G",
                         Price = 7.99M,
-                        ImagePath = "JohnnyLingo"
+                        ImagePath = "JohnnyLingo.jpg"
                     },
 
                     new Movie
@@ -38,7 +38,7 @@ namespace MvcMovie.Models
                         Genre = "Documentary",
                         Rating = "PG",
                         Price = 8.99M,
-                        ImagePath = "MeetTheMormons"
+                        ImagePath = "MeetTheMormons.jpg"
                     },
 
                     new Movie
@@ -48,51 +48,13 @@ namespace MvcMovie.Models
                         Genre = "Action",
                         Rating = "PG-13",
                         Price = 9.99M,
-                        ImagePath = "SaintsAndSoldiers"
+                        ImagePath = "SaintsAndSoldiers.jpg"
                     }
 
                 );
-                // Movie Genres
-                if (!context.GenreLists.Any())
-                {
-                    context.GenreLists.AddRange(
-                        new GenreList
-                        {
-                            GenreListID = 1,
-                            GenreListName = "Action",
 
-                        },
-                        new GenreList
-                        {
-                            GenreListID = 2,
-                            GenreListName = "Historical",
-                        },
-                        new GenreList
-                        {
-                            GenreListID = 3,
-                            GenreListName = "Drama",
 
-                        },
-                        new GenreList
-                        {
-                            GenreListID = 3,
-                            GenreListName = "Comedy",
-                        },
-                        new GenreList
-                        {
-                            GenreListID = 4,
-                            GenreListName = "Family",
-                        },
-                        new GenreList
-                        {
-                            GenreListID = 5,
-                            GenreListName = "Documentary",
-                        }
-
-                        );
-                }
-
-                    context.SaveChanges();
+                context.SaveChanges();
             }
 
             

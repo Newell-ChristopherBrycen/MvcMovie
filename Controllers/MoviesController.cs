@@ -13,17 +13,13 @@ namespace MvcMovie.Controllers
     public class MoviesController : Controller
     {
         private readonly MvcMovieContext _context;
-        public SelectList GenreLists { get; set; }
+        
 
         public MoviesController(MvcMovieContext context)
         {
             _context = context;
         }
-        private void PopulateGenre()
-        {
-            var genres = from x in _context.GenreLists select x;
-            GenreLists = new SelectList(genres.AsEnumerable<GenreList>(), nameof(GenreList.GenreListID), nameof(GenreList.GenreListName));
-        }
+        
         // GET: Movies
         // GET: Movies
         public async Task<IActionResult> Index(string movieGenre, string searchString, string sortOrder)
@@ -94,7 +90,7 @@ namespace MvcMovie.Controllers
         // GET: Movies/Create
         public IActionResult Create()
         {
-            PopulateGenre();
+            
             return View();
         }
 
