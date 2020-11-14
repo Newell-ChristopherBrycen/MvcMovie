@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -26,5 +27,7 @@ namespace MvcMovie.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), StringLength(5)]
         public string Rating { get; set; }
 
+        [Display(Name = "Cover Art")]
+        public string ImagePath { get; set; }
     }
 }

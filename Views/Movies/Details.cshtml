@@ -2,9 +2,9 @@
 @model MvcMovie.Models.Movie
 
 @{
-    ViewData["Title"] = "Details - " + Model.Title;
+    ViewData["Title"] = "Details - " + Model.Title + " -";
 }
-<div class="background">
+<div class="background" style="background: url(../Images/MVCMovieImage.png)">
     <h1>Movie Details</h1>
 
     <div>
@@ -52,13 +52,14 @@
                 </dd>
             </div>
         </dl>
-        <div>
+        <div style="background-color: #c5d5c5; border-radius: 15px;" class="col-12">
             <!-- details view image requirement edit ></!-->
-            <div class="col-sm-10">
-                @Html.DisplayNameFor(model => model.Price)
+            <div class="col-sm-10" style="font-weight: bold;">
+                @Html.DisplayNameFor(model => model.ImagePath)
             </div>
-            <div class="col-sm-10">
-                @Html.DisplayFor(model => model.Price)
+            <div class="col-sm-10" style="padding: 1rem;">
+            
+                <img src="~/Images/@Html.DisplayFor(model => model.ImagePath)" class="img-thumbnail" alt="Image for @Html.DisplayFor(model => model.Title)"/>
             </div>
         </div>
     </div>

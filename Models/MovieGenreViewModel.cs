@@ -11,6 +11,6 @@ namespace MvcMovie.Models
         public SelectList Genres { get; set; }
         public string MovieGenre { get; set; }
         public string SearchString { get; set; }
-
+        public string ImagePath { get; set; }
     }
 }

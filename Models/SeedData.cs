@@ -27,7 +27,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2004-5-11"),
                         Genre = "Family",
                         Rating = "G",
-                        Price = 7.99M
+                        Price = 7.99M,
+                        ImagePath = "JohnnyLingo"
                     },
 
                     new Movie
@@ -36,7 +37,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2014-8-10"),
                         Genre = "Documentary",
                         Rating = "PG",
-                        Price = 8.99M
+                        Price = 8.99M,
+                        ImagePath = "MeetTheMormons"
                     },
 
                     new Movie
@@ -45,7 +47,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2003-9-11"),
                         Genre = "Action",
                         Rating = "PG-13",
-                        Price = 9.99M
+                        Price = 9.99M,
+                        ImagePath = "SaintsAndSoldiers"
                     }
 
                 ); 

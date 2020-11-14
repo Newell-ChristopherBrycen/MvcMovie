@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Images\MVCMovieImage.png" />
+    <None Include="wwwroot\Images\JohnnyLingo.jpg" />
+    <None Include="wwwroot\Images\MeetTheMormons.jpg" />
+    <None Include="wwwroot\Images\MVCMovieImage.png" />
+    <None Include="wwwroot\Images\SaintsAndSoldiers.jpg" />
   </ItemGroup>
 
   <ItemGroup>
