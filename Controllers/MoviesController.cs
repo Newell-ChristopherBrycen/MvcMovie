@@ -18,6 +18,7 @@ namespace MvcMovie.Controllers
         {
             _context = context;
         }
+
         // GET: Movies
         // GET: Movies
         public async Task<IActionResult> Index(string movieGenre, string searchString, string sortOrder)

@@ -1,6 +1,6 @@
 ﻿
 @model MvcMovie.Models.Movie
-
+ MvcMovie.Models.MovieGenreViewModel
 @{
     ViewData["Title"] = "Create Entry";
 }
@@ -54,8 +54,15 @@
                     </div>
                 </div>
                 <br />
+                <div class="card-columns, col-12">
+                    <div style="break-inside: avoid; background-color: #c5d5c5; border-radius: 15px;">
+                        <label asp-for="Genre" class="control-label" style="padding-top: .9rem; padding-left: .9rem; font-size: large; font-weight: bold;"></label>
+                        <input asp-for="Genre" class="form-control" />
+                        <span asp-validation-for="Genre" class="text-danger"></span>
+                    </div>
+                </div>
                 <!-- details view image requirement edit ></!-->
-
+                
 
             </div>
             <hr />
